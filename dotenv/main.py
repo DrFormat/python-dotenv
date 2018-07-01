@@ -42,7 +42,8 @@ def parse_line(line):
         quoted = v[0] == v[-1] in ['"', "'"]
         if quoted:
             v = decode_escaped(v[1:-1])
-    print(k, v, type(v))
+        else:
+            v = v.decode('utf-8').encode('cp1251')
 
     return k, v
 
