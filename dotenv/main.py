@@ -37,11 +37,11 @@ def parse_line(line):
     k, v = k.strip(), v.strip()
 
     k = k.decode('utf-8').encode('cp1251')
-    if v:
-        v = v.encode('unicode-escape').decode('ascii')
-        quoted = v[0] == v[-1] in ['"', "'"]
-        if quoted:
-            v = decode_escaped(v[1:-1])
+    #if v:
+    #    v = v.encode('unicode-escape').decode('ascii')
+    #    quoted = v[0] == v[-1] in ['"', "'"]
+    #    if quoted:
+    #        v = decode_escaped(v[1:-1])
 
     return k, v
 
